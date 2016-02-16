@@ -9,8 +9,9 @@ public class Menu {
 	
 	public void mainMenu() {
 		System.out.println("1. Input new date.");
-		System.out.println("2. Get difference between dates.\n");
-		int choice = getChoice(2);
+		System.out.println("2. Get difference between dates.");
+		System.out.println("3. Exit.\n");
+		int choice = getChoice(3);
 		switch(choice) {
 			case 1:
 				date = inputDate();
@@ -19,6 +20,9 @@ public class Menu {
 			case 2:
 				showDatesDifference();
 				mainMenu();
+				break;
+			case 3:
+				System.out.println("Thank you! Good bye! :)");
 				break;
 		}
 			
@@ -42,7 +46,7 @@ public class Menu {
 					break;
 				}
 			} catch (NumberFormatException e) {
-				System.out.println("Input your choice:");
+				System.out.println("Wrong choice :)");
 			}
 		}
 		return ans;
