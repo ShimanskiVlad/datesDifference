@@ -34,8 +34,8 @@ public class MyInput {
 	
 	public static Date inputDateWithTime() {
 		Date date = new Date();
-		SimpleDateFormat format = new SimpleDateFormat("dd.MM.yyyy hh:mm:ss");
-		System.out.println("Input date (dd.mm.yyyy hh:mm:ss):");
+		SimpleDateFormat format = new SimpleDateFormat("dd.MM.yyyy HH:mm:ss");
+		System.out.println("Input date (dd.mm.yyyy HH:mm:ss):");
 		while (true) {
 			String temp = sc.nextLine();
 			if(isValidDateWithTime(temp)) {
@@ -47,7 +47,7 @@ public class MyInput {
 				}	
 			}
 			else {
-				System.out.println("Input valid date (dd.mm.yyyy hh:mm:ss):");
+				System.out.println("Input valid date (dd.mm.yyyy HH:mm:ss):");
 			}
 		}
 		return date;

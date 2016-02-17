@@ -41,7 +41,7 @@ public class DatesDifference {
 		if (inputDate != null) {
 			Date date = new Date();
 			Date date2 = inputDate;
-			SimpleDateFormat format = new SimpleDateFormat("dd.MM.yyyy hh:mm:ss");
+			SimpleDateFormat format = new SimpleDateFormat("dd.MM.yyyy HH:mm:ss");
 			format.setTimeZone(TimeZone.getTimeZone("GMT"));
 			String d1 = format.format(date);
 			String d2 = format.format(date2);
