@@ -15,18 +15,7 @@ public class DatesDifference {
 		if (inputDate != null) {
 			Date date = new Date();
 			Date date2 = inputDate;
-			SimpleDateFormat format = new SimpleDateFormat("dd.MM.yyyy");
-			
-			String d1 = format.format(date);
-			String d2 = format.format(date2);
-			
-			try {
-			    date = format.parse(d1);
-			    date2 = format.parse(d2);
-			} catch (Exception e) {
-			    e.printStackTrace();
-			}
-			
+			SimpleDateFormat format = new SimpleDateFormat("dd.MM.yyyy");			
 			long difference = date.getTime()  - date2.getTime();
 			days = Math.abs((int) (difference/(24*60*60*1000)));
 		}
@@ -43,16 +32,7 @@ public class DatesDifference {
 			Date date2 = inputDate;
 			SimpleDateFormat format = new SimpleDateFormat("dd.MM.yyyy HH:mm:ss");
 			format.setTimeZone(TimeZone.getTimeZone("GMT"));
-			String d1 = format.format(date);
-			String d2 = format.format(date2);
-			
-			try {
-			    date = format.parse(d1);
-			    date2 = format.parse(d2);
-			} catch (Exception e) {
-			    e.printStackTrace();
-			}
-			
+						
 			long diff = inputDate.getTime() - date.getTime();
 			diff = diff / 1000;
 			long secs = diff % 60;
@@ -62,7 +42,6 @@ public class DatesDifference {
 			long hours = diff % 24;
 			diff = diff / 24;
 			long days = diff;	
-			//System.out.println(days + " days, " + hours + ":" + min + ":" + sec);
 			result[0] = Math.abs(days);
 			result[1] = Math.abs(hours);
 			result[2] = Math.abs(mins);

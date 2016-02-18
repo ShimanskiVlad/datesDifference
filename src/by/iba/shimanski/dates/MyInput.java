@@ -28,6 +28,13 @@ public class MyInput {
 			else {
 				System.out.println("Input valid date (dd.mm.yyyy):");
 			}
+			/*try {
+				date = format.parse(temp);
+				break;
+			} catch (ParseException e) {
+				System.out.println("Input valid date (dd.mm.yyyy):");
+				//e.printStackTrace();
+			}	*/
 		}
 		return date;
 	}
@@ -44,11 +51,19 @@ public class MyInput {
 					break;
 				} catch (ParseException e) {
 					e.printStackTrace();
+					System.out.println("Input valid date (dd.mm.yyyy HH:mm:ss):");
 				}	
 			}
 			else {
 				System.out.println("Input valid date (dd.mm.yyyy HH:mm:ss):");
 			}
+			/*try {
+				date = format.parse(temp);
+				break;
+			} catch (ParseException e) {
+				//e.printStackTrace();
+				System.out.println("Input valid date (dd.mm.yyyy HH:mm:ss):");
+			}	*/
 		}
 		return date;
 	}
@@ -57,7 +72,6 @@ public class MyInput {
 		Calendar cal = new GregorianCalendar();
         cal.setLenient(false);
         cal.clear();
-        System.out.println(inputValue);
         try {
             int day = Integer.parseInt(inputValue.substring (0, 2));
             int month = Integer.parseInt(inputValue.substring (3, 5));
